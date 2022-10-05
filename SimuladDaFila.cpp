@@ -25,7 +25,8 @@ int main(){
     for(int i = 0; i < 3; i++){ //3 dias
         for(int j = 0; j < 8; j++){ //8 horas de trabalho por dia
             for(int k = 0; k < 60; k++){ // contar os min pra ter mais controle
-                for(int l = 0; l < 6; l++){ // tira nego na fila (5 atendentes)
+            int qntAtendidos = (rand() % 7) + 2;
+                for(int l = 0; l < qntAtendidos; l++){ // tira nego na fila (6 atendentes)
                     try {fila.dequeue();}
                     catch (const char* err){std::cout << err; goto jump;} // pula quando da catch
                 }
